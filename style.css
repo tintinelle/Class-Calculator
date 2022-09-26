@@ -1,0 +1,62 @@
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1%;
+
+    padding: 1%;
+    min-height: 50rem;
+
+    text-align: center;
+
+    background-color: #FCF7FF;
+    color: black;
+}
+
+.main__title {
+    grid-area: 1/1/2/3;
+    background-color: #D2FF96;
+    border: 3px solid #FFAA5A;
+    border-radius: 50px;
+
+    padding: 2%;
+}
+
+.main__sum,
+.main__subtract,
+.main__multiply,
+.main__divide {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+
+    padding: 2%;
+
+    background-color: #D2FF96;
+    border: 3px solid #FFAA5A;
+    border-radius: 50px;
+}
+
+.main__result {
+    width: max-content;
+    min-height: 50%;
+    margin: auto;
+
+    background-color: white;
+    border-radius: 50px;
+
+    font-size: 1.5em;
+}
+
+.main__clear {
+    grid-area: 4/1/5/3;
+
+    padding: 2%;
+
+    background-color: #D2FF96;
+    border: 3px solid #FFAA5A;
+    border-radius: 50px;
+}
+
+.background-change {
+    background-color: #EDFF7A;
+}
