@@ -72,10 +72,40 @@ buttonDivide.addEventListener('click', () => {
     Calculator.calcDivide(firstNumberDivide, secondNumberDivide, resultDivide);
 });
 
+// очистка всех полей
 document.getElementById('clearAllBtn').addEventListener('click', () => {
     inputs.forEach(input => input.value = '');
+    results.forEach(result => result.innerHTML = '');
 });
 
-document.getElementById('clearAllBtn').addEventListener('click', () => {
-    results.forEach(result => result.innerHTML = '');
+// очистка полей блока сложение
+document.getElementById('clearSumBtn').addEventListener('click', () => {
+    for (let i = 0; i < 2; i++) {
+        inputs[i].value = '';
+    }
+    results[0].innerHTML = '';
+});
+
+// очистка полей блока вычитание
+document.getElementById('clearSubstractBtn').addEventListener('click', () => {
+    for (let i = 2; i < 4; i++) {
+        inputs[i].value = '';
+    }
+    results[1].innerHTML = '';
+});
+
+// очистка полей блока умножение
+document.getElementById('clearMultiplyBtn').addEventListener('click', () => {
+    for (let i = 4; i < 6; i++) {
+        inputs[i].value = '';
+    }
+    results[2].innerHTML = '';
+});
+
+// очистка полей блока деление
+document.getElementById('clearDivideBtn').addEventListener('click', () => {
+    for (let i = 6; i < 8; i++) {
+        inputs[i].value = '';
+    }
+    results[3].innerHTML = '';
 });
