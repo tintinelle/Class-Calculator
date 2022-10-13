@@ -45,12 +45,17 @@ class Calculator {
     }
 
     static calcDivide(firstNumber, secondNumber, result) {
-        if (secondNumber.value == 0) {
-            result.innerHTML = "На ноль делить нельзя!";
-            return false;
-        } else {
+        try {
+            if (secondNumber.value == 0)
+                throw new Error('На ноль делить нельзя!');
             result.innerHTML = firstNumber.value / secondNumber.value;
             return firstNumber.value / secondNumber.value;
+
+        } catch (error) {
+            result.innerHTML = error.message;
+
+        } finally {
+            console.log (firstNumber.value / secondNumber.value);
         }
     }
 }
